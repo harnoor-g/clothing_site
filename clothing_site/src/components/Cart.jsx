@@ -12,6 +12,7 @@
  * @returns {JSX.Element} JSX element representing the cart.
  */
 
+import React from 'react';
 
 function Cart({ cartItems, isCartHidden, productData }) {
     if (cartItems === []) {

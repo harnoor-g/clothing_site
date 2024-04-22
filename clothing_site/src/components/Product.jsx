@@ -16,6 +16,8 @@
  * @returns {JSX.Element} JSX element representing the product or a loading indicator.
  */
 
+import React from 'react';
+
 function Product({ handleAddToCart, handleSizeSelection, errorMessage, productData, selectedSizeId, selectedSizeLabel, sizeOptions }) {
 
     if (productData === null) {

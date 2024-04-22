@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import { fetchProduct } from './services/productService';
 import Cart from './components/Cart';
@@ -27,7 +27,9 @@ function App() {
     }
 
     const handleCartVisibility = () => {
-        setCartHidden(visible => !visible)
+        if (cartItems.length > 0) {
+            setCartHidden(visible => !visible);
+        }
     }
 
     const handleAddToCart = () => {
